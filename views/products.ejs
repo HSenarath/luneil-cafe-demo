@@ -12,8 +12,8 @@
         <% for (let i = 0; i < uniqueCategories.length; i++) { %>
             <div class="products-container">
                 <div class="single-product">
-                    <p><%= uniqueCategories[i] %></p>
-                    <img src="/assets/<%=uniqueCategories[i]%>.jpg" alt="<%= uniqueCategories[i]%>">
+                    <p><%= uniqueCategories[i].toUpperCase()  %></p>
+                    <img src="/assets/<%=uniqueCategories[i]%>.jpg" alt="<%= uniqueCategories[i] %>">
                     <div class="choices">
                         <% products.forEach(product => { %>
                            <% if (product.category == uniqueCategories[i]) { %>
