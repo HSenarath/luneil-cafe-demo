@@ -9,10 +9,6 @@ const productSchema = new Schema({
     imageURL: {
         type: String
     },
-    choice: { 
-        type: [{filling: String, price: Number}],
-        required: true
-    },
     price: {
         type: Number,
         required: true
@@ -26,5 +22,7 @@ const productSchema = new Schema({
 }, { timestamps: true});
 
 const Product = mongoose.model('Product', productSchema);
+
+console.log(Product)
 
 module.exports = Product;
