@@ -9,8 +9,8 @@ const productSchema = new Schema({
     imageURL: {
         type: String
     },
-    filling: {
-        type: [String],
+    choice: { 
+        type: [{filling: String, price: Number}],
         required: true
     },
     price: {
