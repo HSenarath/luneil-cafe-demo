@@ -1,6 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 require('dotenv').config()
+const productRoutes = require('./routes/productRoutes');
 
 const app = express();
 
@@ -17,3 +18,5 @@ app.get('/', (req,res) => {
     console.log("hello");
     res.render('index');
 })
+
+app.use('/products',productRoutes);
