@@ -5,8 +5,9 @@
     <%- include('./partials/header.ejs') %>
     <main>
         <h1>ORDER FORM</h1>
-        <!-- <form action="/orders" method="POST"> -->
-            <div class="order-container">
+        <div class="order-container">
+        <form action="/order-history" method="POST" id="form1">
+            <div>
                 <div class="contact-info">
                     <label>First Name:</label>
                     <input type="text" name="firstName">
@@ -23,71 +24,69 @@
                 <h2>QUANTITIES</h2>
                 <h3>Cutlets</h3>
                 <div class="order-details">
-                    <input type="number" name="fish-cutlet">
+                    <input value=0 type="number" name="fish-cutlet">
                     <label>Fish</label>
-                    <input type="number" name="cheese-cutlet">
+                    <input value=0 type="number" name="cheese-cutlet">
                     <label>Cheese</label>
-                    <input type="number" name="chicken-cutlet">
+                    <input value=0 type="number" name="chicken-cutlet">
                     <label>Chicken</label>
                     <p>Subtotal:</p>
                 </div>
                 <h3>Rolls</h3>
                 <div class="order-details">
-                    <input type="number" name="vegetable-roll">
+                    <input value=0 type="number" name="vegetable-roll">
                     <label>Vegetable</label>
-                    <input type="number" name="fish-roll">
+                    <input value=0 type="number" name="fish-roll">
                     <label>Fish</label>
-                    <input type="number" name="pulled-pork-roll">
+                    <input value=0 type="number" name="pork-roll">
                     <label>Pulled Pork</label>
                     <p>Subtotal:</p>
                 </div>
                 <h3>Patties</h3>
                 <div class="order-details">
-                    <input type="number" name="fish-patties">
+                    <input value=0 type="number" name="fish-patties">
                     <label>Fish</label>
-                    <input type="number" name="cheese-patties">
+                    <input value=0 type="number" name="cheese-patties">
                     <label>Cheese</label>
-                    <input type="number" name="chicken-patties">
+                    <input value=0 type="number" name="chicken-patties">
                     <label>Chicken</label>
                     <p>Subtotal:</p>
                 </div>
                 <h3>Pastry</h3>
                 <div class="order-details">
-                    <input type="number" name="spinach-pastry">
+                    <input value=0 type="number" name="spinach-pastry">
                     <label>Spinach & Cream Cheese</label>
-                    <input type="number" name="fish-pastry">
+                    <input value=0 type="number" name="fish-pastry">
                     <label>Fish</label>
-                    <input type="number" name="chicken-pastry">
+                    <input value=0 type="number" name="chicken-pastry">
                     <label>Chicken</label>
-                    <input type="number" name="seenisambal-pastry">
+                    <input value=0 type="number" name="seenisambal-pastry">
                     <label>Seeni Sambal & Egg</label>
-                    <input type="number" name="chicken-sausage-pastry">
+                    <input value=0 type="number" name="chicken-sausage-pastry">
                     <label>Chicken Sausage</label>
                     <p>Subtotal:</p>
                 </div>
                 <h3>Roti</h3>
                 <div class="order-details">
-                    <input type="number" name="vegetable-roti">
+                    <input value=0 type="number" name="vegetable-roti">
                     <label>Vegetable</label>
-                    <input type="number" name="fish-roti">
+                    <input value=0 type="number" name="fish-roti">
                     <label>Fish</label>
-                    <input type="number" name="chicken-roti">
+                    <input value=0 type="number" name="chicken-roti">
                     <label>Chicken</label>
                     <p>Subtotal:</p>
                 </div>
                 <h2>Special Instructions</h2>
                 <textarea name="special-instructions"></textarea>
-                <div class="order-buttons">
-                    <button>Calculate Total</button>
-                    <button>Submit Order</button>
-                    <p>Total: $0 </p>
-                </div>
-        <!-- </form> -->
-        
+            </div>
+        </form>
+        <div class="order-buttons">
+            <button>Calculate Total</button>
+            <button form="form1">Submit Order</button>
+            <p>Total: $0 </p>
         </div>
-
+    </div>          
     </main>
-
-    
 </body>
 </html>
+

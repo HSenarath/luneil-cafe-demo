@@ -11,18 +11,15 @@ const orderSchema = new Schema({
         required: true
     },
     phoneNumber: {
-        type: [String],
+        type: Number,
         required: true 
     },
     pickupDate: {
-        type: Number,
+        type: String,
         required: true
     },
     pickupTime: {
-        type: [String],
-        required: true
-    },pickupTime: {
-        type: [String],
+        type: String,
         required: true
     }, "fish-cutlet": {
         type: Number,
@@ -63,7 +60,7 @@ const orderSchema = new Schema({
     },"seenisambal-pastry": {
         type: Number,
         required: true
-    },"sausage-pastry": {
+    },"chicken-sausage-pastry": {
         type: Number,
         required: true
     },"vegetable-roti": {
@@ -81,7 +78,7 @@ const orderSchema = new Schema({
 
 }, { timestamps: true});
 
-const Order = mongoose.model('Order', productSchema);
+const Order = mongoose.model('Order', orderSchema);
 
 module.exports = Order;
 

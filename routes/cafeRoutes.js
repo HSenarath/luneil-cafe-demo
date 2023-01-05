@@ -1,4 +1,5 @@
 const express = require('express');
+const Order = require('../models/order');
 
 const router = express.Router();
 
@@ -12,6 +13,17 @@ router.get('/order-form', (req, res) => {
 
 router.get('/order-history', (req, res) => {
     res.render('order-history', { title: 'Order History'})
+})
+
+router.post('/order-history', (req,res) => {
+    const newOrder = new Order(req.body)
+    newOrder.save()
+    .then( result => {
+        res.redirect('/order-history')
+    })
+    .catch(err => {
+        console.log(err)
+    })
 })
 
 // router.get('/customer-list', (req, res) => {
