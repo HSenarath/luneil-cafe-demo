@@ -20,7 +20,9 @@ router.get('/:category/:filling', (req, res) => {
     Product.find({category: category, filling: filling})
       .then(result => {
         console.log(result)
-        res.render('product-details', { title: 'Products', product: result[0] }); 
+        // we are grabbing the first item in the result array because the array only has one item, which is the product
+        // object of interest
+        res.render('product-details', { title: 'Products', product: result[0] });
       })
       .catch(err => {
         console.log(err);
