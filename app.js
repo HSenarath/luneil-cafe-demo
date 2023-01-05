@@ -17,3 +17,9 @@ app.get('/', (req,res) => {
     console.log("hello");
     res.render('index');
 })
+
+// Added 
+
+app.get('/orderform', (req,res) => {
+  res.render('orderform');
+})
