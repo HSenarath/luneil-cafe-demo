@@ -23,3 +23,7 @@ app.get('/', (req,res) => {
 app.get('/orderform', (req,res) => {
   res.render('orderform');
 })
+
+app.get('/products', (req,res) => {
+  res.render('products');
+})
