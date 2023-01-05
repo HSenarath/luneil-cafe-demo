@@ -1,7 +1,6 @@
 <html lang="en">
     <%- include('./partials/head.ejs') %>
 <body>
-    <!-- DO NOT CHANGE -->
     <%- include('./partials/header.ejs') %>
     <main>
         <h1>PRODUCTS</h1>
@@ -17,7 +16,7 @@
                     <div class="choices">
                         <% products.forEach(product => { %>
                            <% if (product.category == uniqueCategories[i]) { %>
-                                <a href="/<%= product.title %>"> <%= product.filling %></a>
+                                <a href="/products/<%= product.category %>/<%= product.filling %>"> <%= product.filling %></a>
                            <% } %>
                       <%  }) %>
         <% } %>

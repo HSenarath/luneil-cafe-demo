@@ -13,4 +13,19 @@ router.get('/', (req, res) => {
     })
 })
 
+router.get('/:category/:filling', (req, res) => {
+    console.log(req)
+    const category = req.params.category;
+    const filling = req.params.filling;
+    Product.find({category: category, filling: filling})
+      .then(result => {
+        console.log(result)
+        res.render('product-details', { title: 'Products', product: result[0] }); 
+      })
+      .catch(err => {
+        console.log(err);
+      });
+  });
+
+
 module.exports = router;
