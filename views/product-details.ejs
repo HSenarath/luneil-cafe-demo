@@ -1,0 +1,23 @@
+<html lang="en">
+    <%- include('./partials/head.ejs') %>
+<body>
+    <%- include('./partials/header.ejs') %>
+    <main>
+        <h1><%= product.title %></h1>
+        <img src="/assets/<%= product.imageURL %>" alt="<%= product.imageURL %>">
+        <h2>Price: $<%= (product.price).toFixed(2) %></h2>
+        <h2>Ingredients</h2>
+        <ul>
+            <% for (let i = 0; i < (product.ingredients).length; i++ ) { %>
+                <li><%= product.ingredients[i] %></li>
+            <% } %>
+        </ul>
+        <h2>Special Cooking Notes</h2>
+        <ul>
+            <% for (let i = 0; i < (product.notes).length; i++ ) { %>
+                <li><%= product.notes[i] %></li>
+            <% } %>
+        </ul>
+    </main>
+</body>
+</html>
