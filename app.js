@@ -10,8 +10,6 @@ mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTop
 
 app.set('view engine', 'ejs');
 
-// DELETE BEFORE PUSHING 
-
 app.use(express.static('public'));
 app.use(express.urlencoded({ extended: true}));
 
