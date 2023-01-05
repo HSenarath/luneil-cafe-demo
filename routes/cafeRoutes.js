@@ -1,5 +1,6 @@
 const express = require('express');
 const Order = require('../models/order');
+const SummarizedOrder = require('../models/summarized-order');
 
 const router = express.Router();
 
@@ -60,7 +61,8 @@ router.post('/order-history', (req,res) => {
     //consolelog subtotals 
     const total = cutletTot+rollTot+pattiesTot+pastryTot+rotiTot
     const {firstName, lastName, phoneNumber, pickupDate, pickupTime} = req.body
-    const newOrder = {
+
+    const newOrder = new SummarizedOrder({
         firstName,
         lastName,
         phoneNumber,
@@ -69,9 +71,14 @@ router.post('/order-history', (req,res) => {
         items : orderList,
         total
 
-    }
-
-    console.log(newOrder)
+    })
+    newOrder.save()
+    .then(result => {
+        res.redirect('/orderhistory')
+    })
+    .catch(err => {
+        console.log(err)
+    })
 
     
 });
