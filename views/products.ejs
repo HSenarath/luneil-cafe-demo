@@ -14,58 +14,13 @@
                 <div class="single-product">
                     <p><%= uniqueCategories[i] %></p>
                     <img src="/assets/<%=uniqueCategories[i]%>.jpg" alt="<%= uniqueCategories[i]%>">
+                    <div class="choices">
+                        <% products.forEach(product => { %>
+                           <% if (product.category == uniqueCategories[i]) { %>
+                                <a href="/<%= product.title %>"> <%= product.filling %></a>
+                           <% } %>
+                      <%  }) %>
         <% } %>
-    
-        <div class="products-container">
-            <div class="single-product">
-                <p></p>
-                <img src="/cutlet.png" alt="5 cutlets on white plate">
-                <div class="choices">
-                    <a href="#">Fish</a>
-                    <a href="#">Cheese</a>
-                    <a href="#">Chicken</a>
-                </div>
-            </div>
-            <div class="single-product">
-                <p>ROLLS</p>
-                <img src="/cutlet.png" alt="5 cutlets on white plate">
-                <div class="choices">
-                    <a href="#">Vegetable</a>
-                    <a href="#">Fish</a>
-                    <a href="#">Pulled Pork</a>
-                </div>
-            </div>
-            <div class="single-product">
-                <p>PATTIES</p>
-                <img src="/cutlet.png" alt="5 cutlets on white plate">
-                <div class="choices">
-                    <a href="#">Fish</a>
-                    <a href="#">Cheese</a>
-                    <a href="#">Chicken</a>
-                </div>
-            </div>
-            <div class="single-product">
-                <p>PASTRY</p>
-                <img src="/cutlet.png" alt="5 cutlets on white plate">
-                <div class="choices">
-                    <a href="#">Spinach & Cream Cheese</a>
-                    <a href="#">Fish</a>
-                    <a href="#">Chicken</a>
-                    <a href="#">Seeni Sambal & Egg</a>
-                    <a href="#">Chicken Sausage</a>
-                </div>
-            </div>
-            <div class="single-product">
-                <p>ROTI</p>
-                <img src="/cutlet.png" alt="5 cutlets on white plate">
-                <div class="choices">
-                    <a href="#">Vegetable</a>
-                    <a href="#">Fish</a>
-                    <a href="#">Chicken</a>
-                </div>
-            </div>
-        </div>
-
     </main>
 
     
