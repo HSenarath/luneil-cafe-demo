@@ -18,11 +18,17 @@ const productSchema = new Schema({
     },
     notes: {
         type: [String]
+    },
+    category: {
+        type: String,
+        required: true
+    },
+    filling: {
+        type: String,
+        required: true
     }
 }, { timestamps: true});
 
 const Product = mongoose.model('Product', productSchema);
-
-console.log(Product)
 
 module.exports = Product;

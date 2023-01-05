@@ -4,7 +4,13 @@ const Product = require('../models/product');
 const router = express.Router();
 
 router.get('/', (req, res) => {
-    res.render('products', { title: 'Products'})
+    Product.find()
+    .then(result => {
+        res.render('products', { title: 'Products', products: result });
+    })
+    .catch(err => {
+        console.log(err);
+    })
 })
 
 module.exports = router;

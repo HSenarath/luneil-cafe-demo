@@ -5,9 +5,20 @@
     <%- include('./partials/header.ejs') %>
     <main>
         <h1>PRODUCTS</h1>
+        <% let categories = []%>
+        <% products.forEach(product => categories.push(product.category))%>
+        <% let uniqueCategories = [...new Set(categories)] %>
+
+        <% for (let i = 0; i < uniqueCategories.length; i++) { %>
+            <div class="products-container">
+                <div class="single-product">
+                    <p><%= uniqueCategories[i] %></p>
+                    <img src="/assets/<%=uniqueCategories[i]%>.jpg" alt="<%= uniqueCategories[i]%>">
+        <% } %>
+    
         <div class="products-container">
             <div class="single-product">
-                <p>CUTLETS</p>
+                <p></p>
                 <img src="/cutlet.png" alt="5 cutlets on white plate">
                 <div class="choices">
                     <a href="#">Fish</a>
