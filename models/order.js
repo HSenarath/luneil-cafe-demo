@@ -22,64 +22,63 @@ const orderSchema = new Schema({
         type: String,
         required: true
     }, "fish-cutlet": {
-        type: Number,
-        required: true
+            type: [],
+            required: true
     },"cheese-cutlet": {
-        type: Number,
-        required: true
+            type: [],
+            required: true
     },"chicken-cutlet": {
-        type: Number,
+        type: [],
         required: true
     },"vegetable-roll": {
-        type: Number,
+        type: [],
         required: true
     },"fish-roll": {
-        type: Number,
+        type: [],
         required: true
     },"pork-roll": {
-        type: Number,
+        type: [],
         required: true
     },"fish-patties": {
-        type: Number,
+        type: [],
         required: true
     },"cheese-patties": {
-        type: Number,
+        type: [],
         required: true
     },"chicken-patties": {
-        type: Number,
+        type: [],
         required: true
     },"spinach-pastry": {
-        type: Number,
+        type: [],
         required: true
     },"fish-pastry": {
-        type: Number,
+        type: [],
         required: true
     },"chicken-pastry": {
-        type: Number,
+        type: [],
         required: true
     },"seenisambal-pastry": {
-        type: Number,
+        type: [],
         required: true
     },"chicken-sausage-pastry": {
-        type: Number,
+        type: [],
         required: true
     },"vegetable-roti": {
-        type: Number,
+        type: [],
         required: true
     },"fish-roti": {
-        type: Number,
+        type: [],
         required: true
     },"chicken-roti": {
-        type: Number,
+        type: [],
         required: true
-    }, "special-instructions": {
-        type: [String]
     },
-
+    "special-instructions": {
+    type: [String]
+    }
 }, { timestamps: true});
 
 const Order = mongoose.model('Order', orderSchema);
 
 module.exports = Order;
-
 
