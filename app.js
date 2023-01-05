@@ -18,5 +18,3 @@ app.get('/', (req,res) => {
     console.log("hello");
     res.render('index');
 })
-
-app.use('/products',productRoutes);
