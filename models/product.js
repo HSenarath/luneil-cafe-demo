@@ -9,10 +9,6 @@ const productSchema = new Schema({
     imageURL: {
         type: String
     },
-    choice: { 
-        type: [{filling: String, price: Number}],
-        required: true
-    },
     price: {
         type: Number,
         required: true
