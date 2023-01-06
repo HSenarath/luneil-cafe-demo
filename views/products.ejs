@@ -3,17 +3,18 @@
 <body>
     <%- include('./partials/header.ejs') %>
     <main>
-        <h1>PRODUCTS</h1>
+        <h1 class="page-title">PRODUCTS</h1>
         <% let categories = []%>
         <% products.forEach(product => categories.push(product.category))%>
         <% let uniqueCategories = [...new Set(categories)] %>
         <div class="products-container">
             <% for (let i = 0; i < uniqueCategories.length; i++) { %>
-                
-                    <div class="single-product">
-                        <p><%= uniqueCategories[i].toUpperCase()  %></p>
+                <div class="single-product">
+                    <p><%= uniqueCategories[i].toUpperCase()  %></p>
+                    <div class="product-info">
                         <img src="/assets/<%=uniqueCategories[i]%>.jpg" alt="<%= uniqueCategories[i] %>">
-                        <div class="choices">
+                        <div class="filling">
+                            <h3 class="options">Options: </h3>
                             <% products.forEach(product => { %>
                             <% if (product.category == uniqueCategories[i]) { %>
                                     <a href="/products/<%= product.category %>/<%= product.filling %>"><%= product.filling %></a>
@@ -21,6 +22,7 @@
                         <%  }) %>
                         </div>
                     </div>
+                </div>
             <% } %>
         </div>
     </main>
