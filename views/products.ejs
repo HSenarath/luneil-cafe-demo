@@ -7,21 +7,22 @@
         <% let categories = []%>
         <% products.forEach(product => categories.push(product.category))%>
         <% let uniqueCategories = [...new Set(categories)] %>
-
-        <% for (let i = 0; i < uniqueCategories.length; i++) { %>
-            <div class="products-container">
-                <div class="single-product">
-                    <p><%= uniqueCategories[i].toUpperCase()  %></p>
-                    <img src="/assets/<%=uniqueCategories[i]%>.jpg" alt="<%= uniqueCategories[i] %>">
-                    <div class="choices">
-                        <% products.forEach(product => { %>
-                           <% if (product.category == uniqueCategories[i]) { %>
-                                <a href="/products/<%= product.category %>/<%= product.filling %>"> <%= product.filling %></a>
-                           <% } %>
-                      <%  }) %>
-        <% } %>
+        <div class="products-container">
+            <% for (let i = 0; i < uniqueCategories.length; i++) { %>
+                
+                    <div class="single-product">
+                        <p><%= uniqueCategories[i].toUpperCase()  %></p>
+                        <img src="/assets/<%=uniqueCategories[i]%>.jpg" alt="<%= uniqueCategories[i] %>">
+                        <div class="choices">
+                            <% products.forEach(product => { %>
+                            <% if (product.category == uniqueCategories[i]) { %>
+                                    <a href="/products/<%= product.category %>/<%= product.filling %>"><%= product.filling %></a>
+                            <% } %>
+                        <%  }) %>
+                        </div>
+                    </div>
+            <% } %>
+        </div>
     </main>
-
-    
 </body>
 </html>

@@ -5,17 +5,18 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #ffeda6;
+    background-color: #fbf9f0;
     font-family: 'Playfair Display', serif;
 }
 
 /* header formatting */
 
 header {
-    background: #FFDE59;
+    background: #ffffff;
     color: white;
     text-align: center;
     padding: 10px;
+    border-bottom: 1px solid #E3E1E1;
     
 }
 
@@ -33,10 +34,8 @@ nav {
 /* main section formatting  */
 
 main {
-    background-color: antiquewhite;
     margin: 50px;
-    border: 2px solid black;
-    border-radius: 10px;
+    border-radius: 1.5rem;
 
     
 }
@@ -54,9 +53,12 @@ main h1 {
     justify-content: space-around;
     row-gap: 50px;
     padding: 50px;
+    /*border: solid black 1px;*/
 }
 
 .single-product {
+    background-color: #ffffff;
+    border-radius: 1.5rem;
     align-content: center;
     width: 400px;
     display: flex;
