@@ -268,13 +268,61 @@ main {
 
 /* order form formatting  */
 .order-container {
-    padding: 0px 50px 50px 50px;
-    padding: 50px;
+    border-radius: 1.5rem;
+    border: 2px solid black;
+    margin: 100px;
+    background-color: #ffffff;
+    padding: 1.9rem 2.5rem 2.5rem 2.5rem;
+    
+}
+
+.option-container {
+    display: flex;
+    align-items: center;
+}
+
+.option-container p {
+    min-width: 150px;
+    margin: 0;
+}
+
+.pastry p {
+    min-width: 300px;
+    margin: 0;
+}
+
+.order-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.order-details h3{
+    font-weight: 400;
+    margin-bottom: 10;
+}
+
+.customer-info, .pickup-info, .order-details {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+}
+
+.order-container h2 {
+    font-size: 2rem;
+}
+
+input {
+    border-radius: 800px;
+    border: 1.5px solid rgb(227,225,225);
+    margin-right: 0.5rem;
+    font-size: 1.2rem;
 }
 
 .order-details input{
     width: 40px;
 }
+
+
+
 
 textarea{
     min-height: 100px;
@@ -341,4 +389,36 @@ footer{
 
 .regular {
     font-weight: 300;
+}
+
+@media only screen and (max-width: 820px) {
+    /* for mobile phones */
+    main, header, footer {
+        width: 100vh;
+    }
+
+    nav {
+        gap: 1rem;
+        font-size: 1.2rem;
+    }
+    
+    header img {
+        height: 62.5px;
+        width: 150px;
+        object-fit: cover;
+        
+    }
+
+    .customer-info {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .pickup-info {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
 }
