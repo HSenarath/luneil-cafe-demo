@@ -24,11 +24,12 @@
                 <h2>QUANTITIES</h2>
                 <h3>Cutlets</h3>
                 <div class="order-details">
-                    <input value=0 type="number" name="fish-cutlet">
-                    <input value="Fish Cutlet" type="hidden" name="fish-cutlet">
+                    <input value=0 type="number" name="fish-cutlet" class="fish-cutlet">
+                    <!-- <input value="Fish Cutlet" type="hidden" name="fish-cutlet">
                     <input value=1.00 type="hidden" name="fish-cutlet">
-                    <input value=cutlet type="hidden" name="fish-cutlet">
-                    <label>Fish</label>
+                    <input value=cutlet type="hidden" name="fish-cutlet"> -->
+                    <input value=1.00 type="hidden" name="fish-cutlet">
+                    <label class="fish-cutlet" value=1.00 >Fish</label>
                     <input value=0 type="number" name="cheese-cutlet">
                      <input value="Cheese & Potato Cutlet" type="hidden" name="cheese-cutlet">
                     <input value=1.00 type="hidden" name="cheese-cutlet">
@@ -132,12 +133,22 @@
             </div>
         </form>
         <div class="order-buttons">
-            <button>Calculate Total</button>
+            <button id ="calculate-btn" onclick= "calculate()" >Calculate Total</button>
             <button form="form1">Submit Order</button>
-            <p>Total: $0 </p>
-        </div>
-    </div>          
+            <p>Total:  </p>
+        </div>  
+    </div>     
     </main>
+
+    <script>
+        document.getElementById('calculate-btn').addEventListener('click', () =>{
+            let items = document.querySelectorAll('.fish-cutlet')
+            console.log(items)
+            
+        })
+        
+
+    </script>
 </body>
 </html>
 

@@ -6,25 +6,29 @@
     <main>
         <h1>ORDER HISTORY</h1>
         <div class="order-list">
-            <div class="order-summary">
-                <h4>First Name: </h4>
-                <h4>Last Name: </h4>
-                <h4>Phone Number: </h4>
-                <h4>Pickup Date: </h4>
-                <h4>Pickup Time: </h4>
-                <h4>Items: </h4>
-                <ul>
-                    <li>Fish Roll: 2</li>
-                    <li>Cheese & Potato Cutlet: 10</li>
-                    <li>Fish Roti: 3</li>
-                </ul>
-                <h4>Special Instructions: </h4>
-                <h4>Created: </h4>
-                <h2>Total: </h2>          
-            </div>
+            <% if(orders.length > 0){ %>
+                <% orders.forEach(order => { %>
+
+                    <div class="order-summary">
+                        <h4>First Name: <%= order.firstName%></h4>
+                        <h4>Last Name: <%= order.lastName%></h4>
+                        <h4>Phone Number: <%= order.phoneNumber%></h4>
+                        <h4>Pickup Date: <%= order.pickupDate%></h4>
+                        <h4>Pickup Time: <%= order.pickupTime%></h4>
+                        <h4>Items: </h4>
+                        <ul>
+                            <% order.items.forEach(item => { %>
+                                <li><%= item[1]%> : <%= item[0]%></li>
+                            <%  }) %>
+                        </ul>
+                        <h4>Special Instructions: <%= order["special-instructions"]%></h4>
+                        <h4>Created: <%= order.createdAt%></h4>
+                        <h2>Total: <%= order.total.toFixed(2)%> </h2>          
+                    </div>
+
+              <%  }) %>
+           <% } %>
         </div>
     </main>
-
-    
 </body>
 </html>

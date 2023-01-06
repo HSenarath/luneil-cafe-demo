@@ -24,6 +24,9 @@ const summarizedOrderSchema = new Schema({
     }, items : {
         type: [],
         required: true
+    }, total : {
+        type: Number,
+        required: true
     },
     "special-instructions": {
     type: [String]
