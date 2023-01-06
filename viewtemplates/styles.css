@@ -5,7 +5,7 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #3b3b37;
+    background-color: #ffeda6;
     font-family: 'Playfair Display', serif;
 }
 
@@ -37,6 +37,7 @@ main {
     margin: 50px;
     border: 2px solid black;
     border-radius: 10px;
+    height: 100vh;
 
     
 }
@@ -107,3 +108,16 @@ margin-left: auto;
     cursor: pointer;
 
 }
+
+/* order history formatting  */
+
+.order-list {
+    padding: 0px 50px 50px 50px;
+}
+.order-summary {
+    background-color: lightgrey;
+    border-radius: 10px;
+    padding: 20px 50px;
+    
+}
+

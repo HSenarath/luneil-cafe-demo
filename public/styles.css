@@ -134,3 +134,18 @@ margin-left: auto;
     cursor: pointer;
 
 }
+
+/* order history formatting  */
+
+.order-list {
+    padding: 0px 50px 50px 50px;
+    
+}
+.order-summary {
+    background-color: lightgrey;
+    border-radius: 10px;
+    padding: 20px 50px;
+    margin-bottom: 20px;
+    
+}
+
