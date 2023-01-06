@@ -12,37 +12,85 @@ body {
 /* header formatting */
 
 header {
+    display: flex;
     background: #ffffff;
     color: white;
     text-align: center;
     padding: 10px;
     border-bottom: 1px solid #E3E1E1;
+    height: 15%;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 25px;
+    padding: 10px 25px;
     
 }
 
-header h1 {
-    margin: 0;
-    text-shadow: rgb(61, 60, 55) 1px 0 10px;
+header img {
+    height: 125px;
+    width: 300px;
+    object-fit: cover;
+    
 }
+
+header a {
+    color: #07143B;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+header a:hover {
+    text-decoration: underline;
+}
+
 
 nav {
     display: flex;
-    gap: 20px;
+    gap: 50px;
     justify-content: center;
 }
 
 /* main section formatting  */
 
 main {
-    margin: 50px;
+    margin: 100px;
     border-radius: 1.5rem;
 
     
 }
 
+.banner { 
+    width: 100%;
+    position: relative;
+    
 
-main h1 {
-    text-align: center;
+}
+
+
+.banner button {
+    position: absolute;
+    top: 43%;
+    left: 43%;
+    border-radius: 800px;
+    padding: 8px 24px; 
+    background-color: #F9DB79;
+    font-size: 50px;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    border: none;
+    box-shadow: 2px 7px;
+    
+}
+
+.banner button:hover {
+    box-shadow: 5px 12px;
+}
+
+.banner img {
+    height: 600px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 1.5rem;
 }
 
 /* products formatting  */
