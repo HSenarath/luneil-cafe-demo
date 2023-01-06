@@ -269,6 +269,7 @@ main {
 /* order form formatting  */
 .order-container {
     padding: 0px 50px 50px 50px;
+    padding: 50px;
 }
 
 .order-details input{
