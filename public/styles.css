@@ -38,6 +38,8 @@ header img {
 header a {
     text-decoration: none;
     cursor: pointer;
+    color: #07143B;
+
 }
 
 header a:hover {
