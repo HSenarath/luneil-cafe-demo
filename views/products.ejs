@@ -16,12 +16,13 @@
                     <div class="choices">
                         <% products.forEach(product => { %>
                            <% if (product.category == uniqueCategories[i]) { %>
-                                <a href="/products/<%= product.category %>/<%= product.filling %>"> <%= product.filling %></a>
+                                <a href="/products/<%= product.category %>/<%= product.filling %>"><%= product.filling %></a>
                            <% } %>
                       <%  }) %>
+                    </div>
+                </div>
+            </div>
         <% } %>
     </main>
-
-    
 </body>
 </html>
