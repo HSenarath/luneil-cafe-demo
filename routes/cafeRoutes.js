@@ -6,7 +6,7 @@ const SummarizedOrder = require('../models/summarized-order');
 const router = express.Router();
 
 router.get('/', (req, res) => {
-    res.render('index', { title: 'Homepage'})
+    res.render('index', { title: 'Home'})
 })
 
 router.get('/order-form', (req, res) => {

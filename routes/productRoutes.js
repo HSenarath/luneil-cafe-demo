@@ -14,12 +14,10 @@ router.get('/', (req, res) => {
 })
 
 router.get('/:category/:filling', (req, res) => {
-    console.log(req)
     const category = req.params.category;
     const filling = req.params.filling;
     Product.find({category: category, filling: filling})
       .then(result => {
-        console.log(result)
         // we are grabbing the first item in the result array because the array only has one item, which is the product
         // object of interest
         res.render('product-details', { title: 'Products', product: result[0] });

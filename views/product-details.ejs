@@ -3,21 +3,31 @@
 <body>
     <%- include('./partials/header.ejs') %>
     <main>
-        <h1><%= product.title %></h1>
-        <img src="/assets/<%= product.imageURL %>" alt="<%= product.imageURL %>">
-        <h2>Price: $<%= (product.price).toFixed(2) %></h2>
-        <h2>Ingredients</h2>
-        <ul>
-            <% for (let i = 0; i < (product.ingredients).length; i++ ) { %>
-                <li><%= product.ingredients[i] %></li>
-            <% } %>
-        </ul>
-        <h2>Special Cooking Notes</h2>
-        <ul>
-            <% for (let i = 0; i < (product.notes).length; i++ ) { %>
-                <li><%= product.notes[i] %></li>
-            <% } %>
-        </ul>
+        <div class="product-container">
+            <h1>Product Details</h1>
+            <div class="product-details">
+                <div class="left-container">
+                    <img src="/assets/<%= product.imageURL %>" alt="<%= product.imageURL %>">
+                </div>
+                <div class="right-container">
+                    <h2><%= product.title %></h2>
+                    <h3>Price: <span class="regular">$<%= (product.price).toFixed(2) %></span></h3>
+                    <h3>Ingredients</h3>
+                    <ul>
+                        <% for (let i = 0; i < (product.ingredients).length; i++ ) { %>
+                            <li><%= product.ingredients[i] %></li>
+                        <% } %>
+                    </ul>
+                    <h3>Special Cooking Notes</h3>
+                    <ul>
+                        <% for (let i = 0; i < (product.notes).length; i++ ) { %>
+                            <li><%= product.notes[i] %></li>
+                        <% } %>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </main>
+    <%- include('./partials/footer.ejs') %>
 </body>
 </html>

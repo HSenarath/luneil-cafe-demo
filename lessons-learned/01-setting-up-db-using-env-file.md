@@ -11,7 +11,7 @@ require('dotenv').config()
 ```
 3. Create .env file and add URL connection to MongoDB cluster:
 ```
-MONGODB_URI = URL 
+MONGODB_URI = URL // make sure to add in the database name before ? in the url 
 ```
  Note: make sure to sub in password and the db name
 
