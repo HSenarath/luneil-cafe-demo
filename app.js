@@ -6,8 +6,10 @@ const cafeRoutes = require('./routes/cafeRoutes');
 
 const app = express();
 
+let PORT = process.env.PORT || 8000;
+
 mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
-  .then(result => app.listen(3000))
+  .then(result => app.listen(PORT, console.log(`Server is starting a ${PORT}`)))
   .catch(err => console.log(err));
 
 app.set('view engine', 'ejs');
