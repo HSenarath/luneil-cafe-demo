@@ -5,18 +5,17 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #fbf9f0;
+    background-color: #ffeda6;
     font-family: 'Playfair Display', serif;
 }
 
 /* header formatting */
 
 header {
-    background: #ffffff;
+    background: #FFDE59;
     color: white;
     text-align: center;
     padding: 10px;
-    border-bottom: 1px solid #E3E1E1;
     
 }
 
@@ -34,8 +33,11 @@ nav {
 /* main section formatting  */
 
 main {
+    background-color: antiquewhite;
     margin: 50px;
-    border-radius: 1.5rem;
+    border: 2px solid black;
+    border-radius: 10px;
+    height: 100vh;
 
     
 }
@@ -45,26 +47,20 @@ main h1 {
     text-align: center;
 }
 
-/* products formatting  */
-
 .products-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     row-gap: 50px;
     padding: 50px;
-    /*border: solid black 1px;*/
 }
 
 .single-product {
-    background-color: #ffffff;
-    border-radius: 1.5rem;
     align-content: center;
     width: 400px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* border: 2px solid black; */
 
 }
 
@@ -73,30 +69,6 @@ main h1 {
     width: 350px;
     object-fit: cover;
     border-radius: 10px;
-    
-}
-
-.choices {
-    width: 350px;
-    display: flex;
-    flex-wrap: wrap;
-    gap:5px;
-    margin-top: 10px;
-    justify-content: center;
-}
-
-.choices a {
-    border: 2px solid black;
-    background-color: lightgray;
-    text-decoration: none;
-    color: black;
-    padding: 5px 10px;
-    border-radius: 10px;
-    
-}
-
-.choices a:hover{
-    background-color: #FFDE59;
     
 }
 
@@ -141,13 +113,11 @@ margin-left: auto;
 
 .order-list {
     padding: 0px 50px 50px 50px;
-    
 }
 .order-summary {
     background-color: lightgrey;
     border-radius: 10px;
     padding: 20px 50px;
-    margin-bottom: 20px;
     
 }
 

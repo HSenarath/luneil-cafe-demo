@@ -1,8 +1,25 @@
+<!DOCTYPE html>
 <html lang="en">
-    <%- include('./partials/head.ejs') %>
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Luneil Cafe | Order Form</title>
+</head>
 <body>
     <!-- DO NOT CHANGE -->
-    <%- include('./partials/header.ejs') %>
+    <header>
+        <h1>Luneil Cafe</h1>
+        <nav>
+            <a href="./index.html">HOME</a>
+            <a href="./products.html">PRODUCTS</a>
+            <a href="./orderform.html">ORDER FORM</a>
+            <a href="#">ORDER HISTORY</a>
+            <a href="#">CUSTOMER LIST</a>
+        </nav>
+    </header>
     <main>
         <h1>ORDER FORM</h1>
         <div class="order-container">
@@ -23,13 +40,12 @@
                 </div>
                 <h2>QUANTITIES</h2>
                 <h3>Cutlets</h3>
-                <div class="order-details">
-                    <input value=0 type="number" name="fish-cutlet" class="fish-cutlet">
-                    <!-- <input value="Fish Cutlet" type="hidden" name="fish-cutlet">
+                <div class="order-details cutlets">
+                    <input value=0 type="number" name="fish-cutlet">
+                    <input value="Fish Cutlet" type="hidden" name="fish-cutlet">
                     <input value=1.00 type="hidden" name="fish-cutlet">
-                    <input value=cutlet type="hidden" name="fish-cutlet"> -->
-                    <input value=1.00 type="hidden" name="fish-cutlet">
-                    <label class="fish-cutlet" value=1.00 >Fish</label>
+                    <input value=cutlet type="hidden" name="fish-cutlet">
+                    <label>Fish</label>
                     <input value=0 type="number" name="cheese-cutlet">
                      <input value="Cheese & Potato Cutlet" type="hidden" name="cheese-cutlet">
                     <input value=1.00 type="hidden" name="cheese-cutlet">
@@ -43,7 +59,7 @@
                     <p>Subtotal:</p>
                 </div>
                 <h3>Rolls</h3>
-                <div class="order-details">
+                <div class="order-details rolls">
                     <input value=0 type="number" name="vegetable-roll">
                      <input value="Vegetable Roll" type="hidden" name="vegetable-roll">
                     <input value=2.00 type="hidden" name="vegetable-roll">
@@ -62,7 +78,7 @@
                     <p>Subtotal:</p>
                 </div>
                 <h3>Patties</h3>
-                <div class="order-details">
+                <div class="order-details patties">
                     <input value=0 type="number" name="fish-patties">
                     <input value="Fish Patties" type="hidden" name="fish-patties">
                     <input value=1.25 type="hidden" name="fish-patties">
@@ -81,7 +97,7 @@
                     <p>Subtotal:</p>
                 </div>
                 <h3>Pastry</h3>
-                <div class="order-details">
+                <div class="order-details pastry">
                     <input value=0 type="number" name="spinach-pastry">
                      <input value="Fish Cutlet" type="hidden" name="spinach-pastry">
                     <input value=2.50 type="hidden" name="spinach-pastry">
@@ -110,7 +126,7 @@
                     <p>Subtotal:</p>
                 </div>
                 <h3>Roti</h3>
-                <div class="order-details">
+                <div class="order-details roti">
                     <input value=0 type="number" name="vegetable-roti">
                      <input value="Vegetable Roti" type="hidden" name="vegetable-roti">
                     <input value=2.50 type="hidden" name="vegetable-roti">
@@ -133,22 +149,19 @@
             </div>
         </form>
         <div class="order-buttons">
-            <button id ="calculate-btn" onclick= "calculate()" >Calculate Total</button>
+            <button id ="calculate-btn">Calculate Total</button>
             <button form="form1">Submit Order</button>
-            <p>Total:  </p>
-        </div>  
-    </div>     
+            <p>Total: $0 </p>
+        </div>
+    </div>          
     </main>
+<script>
 
-    <script>
-        document.getElementById('calculate-btn').addEventListener('click', () =>{
-            let items = document.querySelectorAll('.fish-cutlet')
-            console.log(items)
-            
-        })
-        
+    const cutlet = document.getElementsByClassName('cutlets')
+    console.log(cutlet)
 
-    </script>
+
+</script>
 </body>
 </html>
 
