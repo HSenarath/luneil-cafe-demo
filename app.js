@@ -12,7 +12,7 @@ mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTop
   .then(result => {
 
     app.listen(PORT, () => {
-      console.log('server is listening on port 3000')
+      console.log(`server is listening on port ${PORT}`)
     })
   })
   .catch((err)=> console.log(err))

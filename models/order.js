@@ -8,10 +8,10 @@ const orderSchema = new Schema({
     },
     lastName: {
         type: String,
-        required: true
+        required: false
     },
     phoneNumber: {
-        type: Number,
+        type: String,
         required: true 
     },
     pickupDate: {
