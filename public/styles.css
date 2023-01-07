@@ -9,6 +9,9 @@ body {
     font-family: 'Playfair Display', serif;
     color: #07143B;
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 }
 
 /* header formatting */
@@ -20,19 +23,18 @@ header {
     text-align: center;
     padding: 10px;
     border-bottom: 1px solid #E3E1E1;
-    height: 15%;
     justify-content: space-between;
     align-items: center;
     font-size: 25px;
-    padding: 10px 25px;
-    
+    padding: 10px 25px;;
+
 }
 
 header img {
     height: 125px;
     width: 300px;
     object-fit: cover;
-    
+
 }
 
 header a {
@@ -63,14 +65,14 @@ nav {
 main {
     border-radius: 1.5rem;
 
-    
+
 }
 
-.banner { 
-    
+.banner {
+
     position: relative;
     padding: 100px;
-    
+
 }
 
 .banner img {
@@ -112,7 +114,7 @@ main {
     color: white;
     font-family: 'Poppins', sans-serif;
     border: none;
-    padding: 24px; 
+    padding: 24px;
 }
 
 .banner button {
@@ -171,7 +173,7 @@ main {
     height:350px;
     width: 350px;
     object-fit: cover;
-    
+
 }
 
 .filling {
@@ -191,12 +193,12 @@ main {
     background-color: #FFDE59;
     margin: 0px 20px;
     font-size: 1.1rem;
-    
+
 }
 
 .filling a:hover{
     transform: scale(1.1);
-    
+
 }
 
 .options {
@@ -211,7 +213,7 @@ main {
 
 
 .product-container {
- 
+
     border-radius: 1.5rem;
     margin: 100px;
     background-color: #ffffff;
@@ -224,7 +226,7 @@ main {
 
 .product-details {
     display: flex;
-    
+
 }
 
 .product-container h1 {
@@ -249,7 +251,7 @@ main {
     margin-top: 0;
     font-size: 2.5rem;
     border-bottom: 2px solid #FFDE59;
-    
+
 }
 
 .right-container h3 {
@@ -262,7 +264,7 @@ main {
 .right-container li {
     font-size: 1.2rem;
     font-family: 'Poppins', sans-serif;
-    
+
 }
 
 
@@ -272,10 +274,10 @@ main {
 .order-container {
     border-radius: 1.5rem;
     border: 2px solid black;
-    margin: 100px;
+    margin: 100px 200px 200px 200px;
     background-color: #ffffff;
     padding: 1.9rem 2.5rem 2.5rem 2.5rem;
-    
+
 }
 
 .option-container {
@@ -313,14 +315,15 @@ main {
 }
 
 input {
-    border-radius: 800px;
-    border: 1.5px solid rgb(227,225,225);
-    margin-right: 0.5rem;
+    border-radius: 5px;
+    border: 2px solid rgb(227,225,225);
+    margin-right: 1rem;
     font-size: 1.2rem;
+    text-align: center;
 }
 
 .order-details input{
-    width: 40px;
+    width: 100px;
 }
 
 
@@ -357,7 +360,7 @@ margin-left: auto;
 
 .order-list {
     padding: 50px;
-    
+
 }
 .order-summary {
     background-color: white;
@@ -366,7 +369,7 @@ margin-left: auto;
     font-size: 1.2rem;
     padding: 20px 50px;
     margin-bottom: 20px;
-    
+
 }
 
 /* footer formatting  */
@@ -380,6 +383,7 @@ footer a {
 }
 
 footer{
+    margin-top: auto;
     background-color: white;
     border-top: 1px solid #E3E1E1;
     padding: 10px;
@@ -395,34 +399,293 @@ footer{
     font-weight: 300;
 }
 
+/* media queries  */
+
 @media only screen and (max-width: 820px) {
-    /* for mobile phones */
-    main, header, footer {
-        width: 100vh;
+
+    footer {
+        margin-top: auto;
+    }
+
+    body {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
     }
 
     nav {
         gap: 1rem;
         font-size: 1.2rem;
     }
-    
+
     header img {
         height: 62.5px;
         width: 150px;
         object-fit: cover;
-        
+
     }
 
-    .customer-info {
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    body {
         display: flex;
         flex-direction: column;
+        width: 100%;
+    }
+
+    /* header formatting  */
+
+    header {
+        padding: 7px;
+    }
+    nav {
+        gap: 0.2rem;
+        font-size: 0.7rem;
+    }
+
+    header img {
+        height: 47px;
+        width: 112.5px;
+        object-fit: cover;
+
+    }
+/* homepage formatting  */
+
+    .banner {
+        padding: 20px;
+    }
+
+    .banner img {
+        opacity: 30%;
+        height: 400px;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 1.5rem;
+    }
+
+    .welcome-message h2 {
+        font-size: 3rem;
+    }
+
+    .welcome-message h3 {
+        font-size: 1.5rem;
+        margin-top: 10px;
+        font-weight: 300;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    /* order form  */
+
+    .products-container {
+        padding-top: 30px;
+
+    }
+
+    .page-title {
+        font-size: 2.5rem;
+        margin-bottom: -30px;
+        margin-top: 30px;
+    }
+
+    .order-container {
+        margin: 40px 20px 20px 20px;
+    }
+
+
+    .customer-info, .pickup-info, .order-details, input {
+        font-family: 'Poppins', sans-serif;
+        font-size: 0.6rem;
+    }
+
+    .order-details input{
+        width: 3rem;
+    }
+
+    .order-container h2 {
+        font-size: 1rem;
+    }
+
+    .option-container p {
+        min-width: 75px;
+    }
+
+    .pastry p {
+        min-width: 150px;
+    }
+
+    footer{
+        font-size: 0.5rem;
+    }
+
+}
+
+@media only screen and (max-width: 1700px) {
+
+.customer-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: flex-start;
+}
+    
+.pickup-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+}
+
+
+
+@media only screen and (max-width: 1100px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    /* header formatting  */
+
+    header {
+        padding: 10px;
+    }
+    nav {
         gap: 0.5rem;
+        font-size: 0.9rem;
     }
 
-    .pickup-info {
+        /* order form  */
+
+
+    .page-title {
+        font-size: 2.5rem;
+        margin-bottom: -30px;
+        margin-top: 30px;
+    }
+
+    .order-container {
+        margin: 40px 20px 20px 20px;
+    }
+
+
+    .customer-info, .pickup-info, .order-details, input {
+        font-family: 'Poppins', sans-serif;
+        font-size: 0.6rem;
+    }
+
+    .order-container h2 {
+        font-size: 1rem;
+    }
+
+    .option-container p {
+        min-width: 75px;
+    }
+
+    .pastry p {
+        min-width: 150px;
+    }
+
+}
+
+
+@media only screen and (max-width: 600px) {
+    body {
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
-        gap: 1rem;
+        width: 100%;
+    }
+
+    /* header formatting  */
+
+    header {
+        padding: 7px;
+    }
+    nav {
+        gap: 0.2rem;
+        font-size: 0.7rem;
+    }
+
+    header img {
+        height: 47px;
+        width: 112.5px;
+        object-fit: cover;
+
+    }
+/* homepage formatting  */
+
+    .banner {
+        padding: 20px;
+    }
+
+    .banner img {
+        opacity: 30%;
+        height: 400px;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 1.5rem;
+    }
+
+    .welcome-message h2 {
+        font-size: 3rem;
+    }
+
+    .welcome-message h3 {
+        font-size: 1.5rem;
+        margin-top: 10px;
+        font-weight: 300;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    /* order form  */
+
+    .products-container {
+        padding-top: 30px;
+
+    }
+
+    .page-title {
+        font-size: 2.5rem;
+        margin-bottom: -30px;
+        margin-top: 30px;
+    }
+
+    .order-container {
+        margin: 40px 20px 20px 20px;
+    }
+
+
+    .customer-info, .pickup-info, .order-details, input {
+        font-family: 'Poppins', sans-serif;
+        font-size: 0.6rem;
+    }
+
+    .order-container h2 {
+        font-size: 1rem;
+    }
+
+    .option-container p {
+        min-width: 75px;
+    }
+
+    .pastry p {
+        min-width: 150px;
+    }
+
+
+
+    footer{
+        font-size: 0.5rem;
+    }
+
+}
+
+@media only screen and (max-width: 400px) {
+    nav {
+        gap: 0.2rem;
+        font-size: 0.5rem;
     }
 }
