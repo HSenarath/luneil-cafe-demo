@@ -4,26 +4,26 @@
 <body>
     <%- include('./partials/header.ejs') %>
     <main>
-        <h1>ORDER HISTORY</h1>
+        <h1 class="page-title">ORDER HISTORY</h1>
         <div class="order-list">
             <% if(orders.length > 0){ %>
                 <% orders.forEach(order => { %>
 
                     <div class="order-summary">
-                        <h4>First Name: <%= order.firstName%></h4>
-                        <h4>Last Name: <%= order.lastName%></h4>
-                        <h4>Phone Number: <%= order.phoneNumber%></h4>
-                        <h4>Pickup Date: <%= order.pickupDate%></h4>
-                        <h4>Pickup Time: <%= order.pickupTime%></h4>
+                        <h4>First Name: <span class="regular"><%= order.firstName%></h4></span>
+                        <h4>Last Name: <span class="regular"><%= order.lastName%></h4></span>
+                        <h4>Phone Number: <span class="regular"><%= order.phoneNumber%></h4></span>
+                        <h4>Pickup Date: <span class="regular"><%= order.pickupDate%></h4></span>
+                        <h4>Pickup Time: <span class="regular"><%= order.pickupTime%></h4></span>
                         <h4>Items: </h4>
                         <ul>
                             <% order.items.forEach(item => { %>
-                                <li><%= item[1]%> : <%= item[0]%></li>
+                                <span class="regular"><li><%= item[0]%> : <%= item[3]%></li></span>
                             <%  }) %>
                         </ul>
-                        <h4>Special Instructions: <%= order["special-instructions"]%></h4>
-                        <h4>Created: <%= order.createdAt%></h4>
-                        <h2>Total: <%= order.total.toFixed(2)%> </h2>          
+                        <h4>Special Instructions: <span class="regular"><%= order["special-instructions"]%></h4></span>
+                        <h4>Created: <span class="regular"><%= order.createdAt%></h4></span>
+                        <h2>Total: <span class="regular">$<%= order.total.toFixed(2)%> </h2></span>        
                     </div>
 
               <%  }) %>

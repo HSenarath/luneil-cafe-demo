@@ -29,7 +29,6 @@ router.get('/order-history', (req,res) => {
 })
 
 router.post('/order-history', (req,res) => {
-    
     const options = ['fish-cutlet', 'cheese-cutlet', 'chicken-cutlet', 'vegetable-roll', 'fish-roll', 'pork-roll', 'fish-patties', 'cheese-patties', 'chicken-patties', 'spinach-pastry', 'fish-pastry', 'chicken-pastry', 'seenisambal-pastry', 'chicken-sausage-pastry', 'vegetable-roti', 'fish-roti', 'chicken-roti']
     let orderList =[]
     
@@ -37,9 +36,10 @@ router.post('/order-history', (req,res) => {
         orderList.push(req.body[option])
     }) 
 
-    // remove items with value 0
-    orderList = orderList.filter( item => Number(item[0]) > 0)
 
+    // remove items with value 0
+    orderList = orderList.filter( item => Number(item[3]) > 0)
+    console.log(orderList)
       // calculate subtotals
 
     let cutletTot = 0
@@ -51,28 +51,32 @@ router.post('/order-history', (req,res) => {
   
 
     orderList.forEach (item => {
-        switch (item[3]){
+        switch (item[2]){
             case "cutlet":
-                cutletTot += Number(item[2])*Number(item[0])
+                console.log(Number(item[1]))
+                console.log(Number(item[3]))
+                cutletTot += Number(item[1])*Number(item[3])
                 break;
             case "roll":
-                rollTot += Number(item[2])*Number(item[0])
+                rollTot += Number(item[1])*Number(item[3])
                 break;
             case "patties":
-                pattiesTot += Number(item[2])*Number(item[0])
+                pattiesTot += Number(item[1])*Number(item[3])
                 break;
             case "pastry":
-                    pastryTot += Number(item[2])*Number(item[0])
+                    pastryTot += Number(item[1])*Number(item[3])
                     break;
             case "roti":
-                    rotiTot += Number(item[2])*Number(item[0])
+                    rotiTot += Number(item[1])*Number(item[3])
                         break;
 
         }
     })
+    
 
     //consolelog subtotals 
     const total = cutletTot+rollTot+pattiesTot+pastryTot+rotiTot
+    console.log(total)
     const {firstName, lastName, phoneNumber, pickupDate, pickupTime} = req.body
    
 
