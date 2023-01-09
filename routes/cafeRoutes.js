@@ -77,7 +77,7 @@ router.post('/order-history', (req,res) => {
     //consolelog subtotals 
     const total = cutletTot+rollTot+pattiesTot+pastryTot+rotiTot
     console.log(total)
-    const {firstName, lastName, phoneNumber, pickupDate, pickupTime} = req.body
+    const {firstName, lastName, phoneNumber, pickupDate, pickupTime, specialinstructions} = req.body
    
 
     const newOrder = new SummarizedOrder({ 
@@ -86,6 +86,7 @@ router.post('/order-history', (req,res) => {
         phoneNumber,
         pickupDate,
         pickupTime,
+        specialinstructions,
         items : orderList,
         total
     })
