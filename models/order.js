@@ -73,8 +73,8 @@ const orderSchema = new Schema({
         type: [],
         required: true
     },
-    "special-instructions": {
-    type: [String]
+    "specialinstructions": {
+    type: String
     }
 }, { timestamps: true});
 
