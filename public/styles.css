@@ -2,15 +2,17 @@
     box-sizing: border-box;
 }
 
+
 body {
+    min-height: 100vh;
     margin: 0;
     padding: 0;
     background-color: #fbf9f0;
     font-family: 'Playfair Display', serif;
     color: #07143B;
-    height: 100vh;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     width: 100%;
 }
 
@@ -69,10 +71,8 @@ main {
 }
 
 .banner {
-
     position: relative;
-    padding: 100px;
-
+    padding: 100px 100px 50px 100px;
 }
 
 .banner img {
@@ -85,7 +85,7 @@ main {
 
 
 .welcome-message {
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -45%);
     -ms-transform: translate(-50%, -50%);
     position: absolute;
     top: 50%;
@@ -102,7 +102,7 @@ main {
 }
 
 .welcome-message h3 {
-    font-size: 40px;
+    font-size: 2.5rem;
     margin-top: 10px;
     font-weight: 300;
     font-family: 'Poppins', sans-serif;
@@ -115,17 +115,59 @@ main {
     font-family: 'Poppins', sans-serif;
     border: none;
     padding: 24px;
+    white-space: nowrap;
+
 }
 
-.banner button {
-
+.banner a {
+    text-decoration: none;
     font-size: 2.5rem;
     box-shadow: 2px 7px;
     margin: 20px 180px;
 }
 
-.banner button:hover {
+.banner a:hover {
     box-shadow: 5px 12px;
+}
+
+.features {
+    display: flex;
+    padding: 100px;
+    justify-content: space-between;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+
+
+.feature-picture-container {
+    background-color: rgb(227,225,225);
+    border-radius: 1rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    
+}
+
+.feature-container img {
+
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+}
+
+.feature-container a {
+    text-decoration: none;
+    color: black;
+    padding: 5px 10px;
+    background-color: #FFDE59;
+    margin: 0px 20px;
+    font-size: 1.1rem;
+    border: 0;
+    font-family: 'Poppins', sans-serif;
+
 }
 
 
@@ -212,15 +254,15 @@ main {
 /* product detail formatting */
 
 
-.product-container {
+.product-details-container {
 
     border-radius: 1.5rem;
-    margin: 100px;
     background-color: #ffffff;
     padding: 1.9rem 2.5rem 2.5rem 2.5rem;
     width: 75%;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 9rem;
 
 }
 
@@ -404,7 +446,41 @@ footer{
 
 @media only screen and (max-width: 1700px) {
 
-.customer-info {
+
+
+.welcome-message h2 {
+    font-size: 4rem;
+    margin: 0;
+}
+
+.welcome-message h3 {
+    font-size: 1.7rem;
+}
+
+.welcome-message a {
+    font-size: 1.7rem;
+}
+
+.features {
+    flex-direction: column;
+    justify-content: center;
+    
+    
+}
+
+.feature-container {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-bottom: 2rem;
+}
+
+.feature-picture-container {
+    display: flex;
+   
+}
+
+    .customer-info {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
@@ -419,6 +495,37 @@ footer{
 }
 
 }
+
+@media only screen and (max-width: 1400px) {
+
+    .product-details-container {
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product-details {
+        gap: 3rem;
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .left-container, .right-container {
+        margin: auto;
+    }
+
+    .right-container {
+        width: 90%;
+    }
+
+    .left-container img {
+        margin-right: 0;
+    }
+    
+    }
 
 
 
@@ -474,6 +581,31 @@ footer{
 
 @media only screen and (max-width: 820px) {
 
+    .welcome-message {
+        width: 500px;
+    }
+    
+    .welcome-message a {
+        margin: 0 5rem;
+        padding: 0.5rem;
+    }
+
+
+    .feature-container {
+        width: 100%;
+    }
+
+    .feature-picture-container {
+        margin: auto;
+    }
+
+    .feature-picture-container img {
+        margin: auto;
+        width: 300px;
+        height: 300px;
+    }
+    
+    
     footer {
         margin-top: auto;
     }
@@ -482,6 +614,8 @@ footer{
         display: flex;
         flex-direction: column;
         width: 100%;
+        justify-content: space-between;
+        height: 100vh;
     }
 
     nav {
@@ -499,10 +633,11 @@ footer{
 
 
     .product-container {
-        margin-top: 15rem;
+        margin-top: 1srem;
         border-radius: 1.5rem;
         display: flex;
         flex-direction: column;
+        border: 2px solid black;
     }
     
     .product-details {
@@ -533,6 +668,7 @@ footer{
     .right-container li {
         font-size: 0.7rem;
     }
+
     
 
 
@@ -565,7 +701,7 @@ footer{
     }
 /* homepage formatting  */
 
-    .banner {
+    .banner, .features {
         padding: 20px;
     }
 
@@ -577,21 +713,45 @@ footer{
         border-radius: 1.5rem;
     }
 
+    .welcome-message {
+        width: 350px;
+        
+    }
+
     .welcome-message h2 {
-        font-size: 3rem;
+        font-size: 2rem;
     }
 
     .welcome-message h3 {
-        font-size: 1.5rem;
+        font-size: 1rem;
         margin-top: 10px;
         font-weight: 300;
         font-family: 'Poppins', sans-serif;
+        white-space: wrap;
     }
+    
+    .welcome-message a {
+        font-size: 1rem;
+        margin: 0 5rem;
+        padding: 0.5rem;
+    }
+
+    .feature-picture-container img {
+        width: 200px;
+        height: 200px;
+    }
+
+    #features .page-title {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+    
 
     /* order form  */
 
     .products-container {
         padding-top: 30px;
+        
 
     }
 
@@ -631,31 +791,30 @@ footer{
 
     /* product details formatting */
 
-    .product-container {
+    .product-details-container {
         padding: 1rem; 
-        margin-top: 4rem;
         border-radius: 1.5rem;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+    }
+
+    .product-details {
+        gap: 1rem
     }
     
 
 
     .right-container {
-        width: 70%;
+        width: 90%;
     }
 
     .product-details {
         display: flex;
         align-items: center;
         flex-direction: column;
-    
     }
     
-    .product-container h1 {
-        font-size: 1.1rem;
-        margin-top: 0;
+    .product-details-container h1 {
+ 
+        margin: 0;
     }
     
     .left-container img {
