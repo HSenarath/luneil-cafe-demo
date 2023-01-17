@@ -65,15 +65,15 @@ Please note,the fields listed below must be filled in order for the form to be s
 
 * [Deploy your Node, Express JS project on Railway](https://www.youtube.com/watch?v=4Ga4c_amvY8&ab_channel=RahatWebDev) - A great tutorial on how to deploy using Railway. 
 
-## Author
+## Authors
 
 ### Hiruni Senerath
 * Portfolio Website - [Coffee and Code](https://hsenarath.github.io/coffee-and-code/)
-* LinkedIn - [www.linkedin.com/in/hirunisenarath](www.linkedin.com/in/hirunisenarath)
+* LinkedIn - [www.linkedin.com/in/hirunisenarath](https://www.linkedin.com/in/hirunisenarath/)
 * Github - [@hsenarath](https://github.com/HSenarath) 
 
 ### Sanduni Senerath
 
 * Portfolio Website - [Sanduni Senarath](https://ssenarath.github.io/portfolio-website/)
-* LinkedIn - [www.linkedin.com/in/ssenarath](www.linkedin.com/in/ssenarath)
+* LinkedIn - [www.linkedin.com/in/ssenarath](https://www.linkedin.com/in/ssenarath)
 * Github - [@ssenarath](https://github.com/SSenarath)
