@@ -13,7 +13,7 @@ My sister and I wanted to collaborate on a project, so we chose to developed a r
 * [Author](#author)
 
 ## Demo
-* Live Site URL: [https://luneil-cafe-demo.up.railway.app/](https://github.com/HSenarath/luneil-cafe-demo)
+* Live Site URL: [https://luneil-cafe-demo.up.railway.app/](https://luneil-cafe-demo.up.railway.app/)
 
 ## Technologies
 **Built with:**
@@ -28,46 +28,52 @@ My sister and I wanted to collaborate on a project, so we chose to developed a r
 ## Overview
 ### Requirements
 
-<!-- Below was taken from previous project for formatting reference - Please disregard.  -->
-
-<!-- - [x] Allow user to select the length of the password (minimum 8 characters and maximum 20 characters)
-- [x] Create a random password, which could be made up of any character in the alphabet and symbols
-- [x] Display the random password to user
-- [x] Add 1-click copy button to allow user to copy the password to clipboard
-- [x] Implement the interface design as outlines by [Scrimba's Figma design file](https://www.figma.com/file/YRO9Iw5IYaOorjnRyNz4bV/Random-Password-Generator?node-id=0%3A1) -->
+- [x] Allow user to view product details (price, ingredients, special cooking notes).
+- [x] Allow user to input new orders and have application store them in a database. 
+- [x] Allow user to view order history. 
 
 ### Screenshots
 
-<!-- Below was taken from previous project for formatting reference - Please disregard.  -->
+**Demo of Product Details Feature**
 
-<!-- **How to Use:**
+![](https://github.com/HSenarath/luneil-cafe-demo/blob/d15334798a14bd097bcd417bb140e96a078018b3/public/assets/screenshots/product-details.gif)
 
-![](https://github.com/HSenarath/random-password-generator/blob/915b8c9749e830a0ae1e6fac05377cf15e511aa6/screenshots/password-generator-demo.gif)
+**Demo of Order Form Feature**
 
-**Demo of the Webpage's Responsiveness**
+Please note,the fields listed below must be filled in order for the form to be submitted. Will be adding this note, to website in a future push. 
+* First Name
+* Last Name
+* Phone Number
+* Pickup Data
+* Pickup Time
 
-![](https://github.com/HSenarath/random-password-generator/blob/915b8c9749e830a0ae1e6fac05377cf15e511aa6/screenshots/password-generator-responsive.gif) -->
+![](https://github.com/HSenarath/luneil-cafe-demo/blob/d15334798a14bd097bcd417bb140e96a078018b3/public/assets/screenshots/order-form.gif) 
+
+**Demo of Order History Feature**
+
+![](https://github.com/HSenarath/luneil-cafe-demo/blob/d15334798a14bd097bcd417bb140e96a078018b3/public/assets/screenshots/order-form.gif) 
 
 ## Next Steps
 
-<!-- Below was taken from previous project for formatting reference - Please disregard.  -->
+- [x] Add order status to order history form and allow user to change status as required. 
+- [x] Add feature to allow user to input new products to product database through web application. This can only currently be done through accessing the MongoDB database online. 
+- [x] The website is currently responsive, but a future goal is to refactor the css using a mobile first design approach to allow website application to be more responsive to different screen sizes and to make code cleaner / dryer. 
 
-<!-- - [x] Implement the feature to choose to enable/disable numbers and symbols
-- [x] Ensure the generated password stays within the container of the text field
-- [x] Look into how to allow users to store passwords -->
 
 ## Useful Resources
 
-<!-- Below was taken from previous project for formatting reference - Please disregard.  -->
 
-<!-- * [css-tricks](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) - A great cheatsheet for how to use CSS flexbox layout
-* [w3schools - HTML Elements Reference](https://www.w3schools.com/TAGS/default.asp) - Useful cheatsheet for the various passible HTML elements
-* [w3schools - How to Copy Text to Clipboard](https://www.w3schools.com/howto/howto_js_copy_clipboard.asp) - Taught me how to implement my copy button so user's could copy the generated passwords easily -->
+* [Deploy your Node, Express JS project on Railway](https://www.youtube.com/watch?v=4Ga4c_amvY8&ab_channel=RahatWebDev) - A great tutorial on how to deploy using Railway. 
 
 ## Author
 
-<!-- Below was taken from previous project for formatting reference - Please disregard.  -->
-
-<!-- * Portfolio Website - [Coffee and Code](https://hsenarath.github.io/coffee-and-code/)
+### Hiruni Senerath
+* Portfolio Website - [Coffee and Code](https://hsenarath.github.io/coffee-and-code/)
 * LinkedIn - [www.linkedin.com/in/hirunisenarath](www.linkedin.com/in/hirunisenarath)
-* Github - [@hsenarath](https://github.com/HSenarath) -->
+* Github - [@hsenarath](https://github.com/HSenarath) 
+
+### Sanduni Senerath
+
+* Portfolio Website - [Sanduni Senarath](https://ssenarath.github.io/portfolio-website/)
+* LinkedIn - [www.linkedin.com/in/ssenarath](www.linkedin.com/in/ssenarath)
+* Github - [@ssenarath](https://github.com/SSenarath)
