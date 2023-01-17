@@ -1,6 +1,6 @@
 # Restaurant Management App for Luneil Cafe
 
-My sister and I wanted to collaborate on a project, so we chose to developed a restaurant management system using Node.js that can process orders, track order history and store product details to fulfill the business need of my mom’s small catering business. She is using her own version with the real recipes (because we can’t give away family secrets 😉) but you can checkout the demo version below.
+My sister and I wanted to collaborate on a project, so we chose to develop a restaurant management system using Node.js that can process orders, track order history and store product details to fulfill the business needs of my mom’s small catering business. She is using her own version with the real recipes (because we can’t give away family secrets 😉) but you can checkout the demo version below.
 
 ## Table of Contents
 * [Demo](#demo)
@@ -29,7 +29,7 @@ My sister and I wanted to collaborate on a project, so we chose to developed a r
 ### Requirements
 
 - [x] Allow user to view product details (price, ingredients, special cooking notes).
-- [x] Allow user to input new orders and have application store them in a database. 
+- [x] Allow user to input new orders and have the application store them in a database. 
 - [x] Allow user to view order history. 
 
 ### Screenshots
@@ -40,7 +40,7 @@ My sister and I wanted to collaborate on a project, so we chose to developed a r
 
 **Demo of Order Form Feature**
 
-Please note,the fields listed below must be filled in order for the form to be submitted. Will be adding this note, to website in a future push. 
+Please note,the fields listed below must be filled in order for the form to be submitted (Will be adding this note to website in a future push) 
 * First Name
 * Last Name
 * Phone Number
@@ -67,13 +67,13 @@ Please note,the fields listed below must be filled in order for the form to be s
 
 ## Authors
 
-### Hiruni Senerath
-* Portfolio Website - [Coffee and Code](https://hsenarath.github.io/coffee-and-code/)
-* LinkedIn - [www.linkedin.com/in/hirunisenarath](https://www.linkedin.com/in/hirunisenarath/)
-* Github - [@hsenarath](https://github.com/HSenarath) 
-
 ### Sanduni Senerath
 
 * Portfolio Website - [Sanduni Senarath](https://ssenarath.github.io/portfolio-website/)
 * LinkedIn - [www.linkedin.com/in/ssenarath](https://www.linkedin.com/in/ssenarath)
 * Github - [@ssenarath](https://github.com/SSenarath)
+
+### Hiruni Senerath
+* Portfolio Website - [Coffee and Code](https://hsenarath.github.io/coffee-and-code/)
+* LinkedIn - [www.linkedin.com/in/hirunisenarath](https://www.linkedin.com/in/hirunisenarath/)
+* Github - [@hsenarath](https://github.com/HSenarath) 
