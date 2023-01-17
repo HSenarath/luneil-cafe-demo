@@ -51,7 +51,7 @@ Please note,the fields listed below must be filled in order for the form to be s
 
 **Demo of Order History Feature**
 
-![](https://github.com/HSenarath/luneil-cafe-demo/blob/d15334798a14bd097bcd417bb140e96a078018b3/public/assets/screenshots/order-form.gif) 
+![](https://github.com/HSenarath/luneil-cafe-demo/blob/13eb5c99afc938829c7ccd845d553234d487d4c7/public/assets/screenshots/order-history.gif) 
 
 ## Next Steps
 
